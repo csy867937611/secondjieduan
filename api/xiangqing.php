@@ -1,0 +1,34 @@
+<?php
+	// 1、连接数据库
+	// 配置参数
+	$servername = 'localhost';
+	$username = 'root';
+	$password = '';
+	$database = 'zhuce';
+
+	//连接数据库
+	$conn = new mysqli($servername,$username,$password,$database);
+
+	// 检测连接
+	if($conn->connect_errno){
+		die('连接失败'.$conn->connect_error);
+	}
+
+	// 设置字符集
+	$conn->set_charset('utf8');
+
+	$id = isset($_GET['id']) ? $_GET['id'] : 1;
+
+	// 查找所有用户信息
+	$sql = "select * from listy where id='$id'";
+
+
+	// 查询数据库
+	$result = $conn->query($sql);
+
+	//使用查询结果	
+	$row = $result->fetch_all(MYSQLI_ASSOC);
+
+	echo json_encode($row,JSON_UNESCAPED_UNICODE);
+
+?>

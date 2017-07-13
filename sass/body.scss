@@ -1,0 +1,136 @@
+*{margin:0;padding:0;}
+.sbody{
+    background:#f0fbfd;
+    .banner{
+        height:360px;
+        width:100%;
+    }
+    .bannernav{
+        height:30px;
+        width:100%;
+    }
+    .list{
+        width:1190px;
+        margin:20px auto 0;
+        h2{
+            height:30px;width:280px;
+            background:url(../img/newindexbg.png)no-repeat;
+            background-position:0 -44px;
+        }
+        .newline{
+            width:100%;
+            height:10px;
+            border-bottom:1px solid blue;
+        }
+        .listone{
+            margin-top:10px;
+            display:flex;
+            justify-content:space-between;
+            .one,.two{
+                width:290px;
+            }
+                .three{width:590px;display:flex;justify-content:space-between;flex-wrap:wrap;padding-bottom:10px;}
+            img{
+                border:1px solid #f0fbfd;
+                border-radius:15px;
+                margin-bottom:10px;
+            }
+        }
+        .four{
+            display:flex;
+            justify-content:space-between;
+            img{
+                border:1px solid #f0fbfd;
+                border-radius:15px;
+                margin-bottom:10px;
+            }
+            img:nth-of-type(1),nth-of-type(3){
+                width:290px;
+            }
+            img:nth-of-type(2){
+                width:590px;
+            }
+        }
+    }
+    .brand{
+        h2{
+            height:36px;width:280px;
+            background:url(../img/newindexbg.png)no-repeat;
+            background-position:-191px -98px;
+           }
+        div{width:100%;height:265px;background:#fff;}
+        .newline{background:#f0fbfd;}
+        p{margin:10px;float:left;}
+        p img{display:block;margin-bottom:10px;}
+        p:nth-of-type(2){margin:10px 10px 10px 0;}
+        table{float:left;border-collapse:collapse;margin-top:10px;}
+        td{width:119px;height:60px;text-align:center;}
+        a{display:block;width:119px;height:60px;border:1px solid #ddd;}
+        a:hover{border:1px solid yellow;}
+    }
+    .milk{
+        
+        overflow:hidden;
+        margin-top:15px;
+        h2{
+            background:url(../img/indexsprits.png) no-repeat;
+            background-position:0 -43px;
+            width:18px;height:18px;
+            display:inline-block;
+        }
+        p{
+            display:inline-block;
+            font-size:23px;
+            font-weight:600;
+            span{font-size:28px;}
+        }
+        .newline{margin-bottom:10px;background:#f0fbfd;}
+        .milkbox{
+            display:flex;
+            justify-content:space-between;
+            background:#fff;
+            overflow:hidden;
+            .xiaofen{
+                background:#fff;width:230px;float:left;
+                dt{width:65px;display:inline-block;font-size:14px;font-weight:900;padding-top:10px;}
+                dt:nth-of-type(1),dt:nth-of-type(4),dt:nth-of-type(7){padding-left:15px;}
+                a{text-decoration:none;color:#4c4c4c;}
+                .xiaolun{width:230px;}
+            } 
+            .fen{float:left;width:470px;}
+            .table{
+                width:480px;
+                p{
+                    width:155px;
+                    border:1px solid #ddd;
+                    float:left;
+                    img{width:155px;height:155px;padding-bottom:5px;}
+                    a{text-decoration:none;font-size:12px;color:#4c4c4c;display:block;}
+                }
+            }
+        } 
+    }
+   .floor{
+       width:1190px;
+       margin:0 auto;
+       background:url(../img/baoz.png) no-repeat;
+       ul{
+           list-style:none;
+           overflow:hidden;
+           padding-top:120px;
+           li{float:left;margin-left:90px;color:#666;font-size:18px;}
+           li:nth-of-type(2){margin-left:117px;}
+           li:nth-of-type(3){margin-left:145px;}
+           li:nth-of-type(4){margin-left:142px;}
+           li:nth-of-type(5){margin-left:142px;}
+       }
+       ul:nth-of-type(2){
+           padding-top:0;
+           padding-bottom:15px;
+           li{float:left;margin-left:90px;color:#999;font-size:14px;}
+           li:nth-of-type(4){margin-left:80px;}
+           li:nth-of-type(5){margin-left:90px;}
+       }
+   }
+}
+

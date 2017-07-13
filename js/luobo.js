@@ -1,0 +1,39 @@
+//首页
+require(['config'],function(){
+	require(['jquery','abc','cba'],function($){
+		console.log($('.bannerimg'));
+		$('<div/>').addClass('header').load('./html/header.html',function(){
+				$(this).insertBefore('.bigbox');
+		})
+		$('<div/>').addClass('foot').load('./html/footer.html',function(){
+				$(this).insertAfter('.bigbox');
+		})
+		$('.bannerimg').lxCarousel({
+			imgs:['../img/146165925073012.jpg','../img/146362990519903.jpg','../img/146363070255164.jpg'],
+			page:true,
+			bigwidth:1263,
+			bigheight:360,
+			width:1263,
+			height:360,
+			type:'fadeShow',
+			buttons:false
+		});
+		$('.xiaolun').lxCarousel({
+			imgs:['../img/2-1.jpg','../img/2-2.jpg','../img/2-3.jpg','../img/2-4.jpg','../img/2-5.jpg','../img/2-6.jpg'],
+			bigwidth:180,
+			bigheight:60,
+			width:60,
+			height:60,
+			page:false,
+			buttons:false,
+			type:'horizontal'
+		})
+		$('.guding').laochen({
+			type:'gudinglan',
+			width:88,
+			height:300,
+			imgs:['../img/fix01.png','../img/fix02.png','../img/fix03.png','../img/fix04.png','../img/fix05.png']
+		})
+		//console.log(999)
+	})
+})

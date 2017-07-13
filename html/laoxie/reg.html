@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+	<script src="../js/require.js" data-main="../js/reg"></script>
+</head>
+<body>
+<div class="container">
+	<h1>用户注册</h1>
+	<div class="form-group">
+	    <label for="username">用户名：</label>
+	    <input type="text" class="form-control" id="username" name="username">
+	</div>
+	<div class="form-group">
+	    <label for="password">密码：</label>
+	    <input type="password" class="form-control" id="password" name="password">
+	</div>
+	<div class="form-group">
+	    <label for="password">性别</label>
+	    <select name="gender" id="gender" class="form-control">
+	    	<option value="男">男</option>
+	    	<option value="女">女</option>
+	    </select>
+	</div>
+	<button class="btn btn-success" id="btnReg">注册</button>
+</div>
+</body>
+</html>

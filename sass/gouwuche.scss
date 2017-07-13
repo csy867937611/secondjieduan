@@ -1,0 +1,96 @@
+*{margin:0;padding:0;}
+.header{
+    width:100%;border-bottom:1px solid #ddd;
+    overflow:hidden;
+    .head{
+        width:1000px;margin:0 auto;
+        ul{
+            float:right;
+            margin:10px;
+            li{
+                float:left;
+                list-style:none;
+                span{font-size:12px;}
+                a{
+                    text-decoration:none;font-size:12px;color:#000;margin:10px;
+                    
+                }
+            }
+        }
+    } 
+}
+.body{
+     .biaoti{
+        width:1000px;margin:15px auto 0;
+        p:nth-of-type(1){background:url(../img/vvtwospt.png) no-repeat ;width:544px;height:35px;float:right;margin:20px;}
+        p:nth-of-type(2){margin:20px 0;position:relative;}
+        p:nth-of-type(2) span:nth-of-type(1){background:url(../img/vvtwospt.png) no-repeat -117px -197px;display:inline-block;width:25px;height:24px;}
+        p:nth-of-type(2) span:nth-of-type(2){margin-left:5px;}
+        p:nth-of-type(2) span:nth-of-type(3){position:absolute;right:0;}
+    }
+    .godd{
+        p{width:978px;margin:0 auto;border:1px solid orange;background:#fffbf3;padding:10px 0 10px 20px;font-size:14px;
+        labor{margin-right:300px;}
+        span{margin:0 50px;}
+        }
+    .neirong{
+        width:998px;border:1px solid #ddd;margin:0 auto;border-top:0;
+        ul{
+            overflow:hidden;
+            border-bottom:1px solid #ddd;
+            padding-left:20px;
+            li{
+                list-style:none;
+                margin-top:10px;
+                float:left;
+                font-size:16px;
+                img{width:100px;height:100px;}
+                span{border:1px solid #000;display:inline-block;text-align:center;width:20px;}
+                span:nth-of-type(2){width:40px;}
+            }
+            li:nth-of-type(2){width:100px;}
+            li:nth-of-type(3){width:250px;font-size:12px;}
+            li:nth-of-type(4){width:70px;padding:0 80px 0 50px;}
+            li:nth-of-type(6){width:70px;padding:0 70px 0 90px;}
+            li:nth-of-type(7){margin-right:0;}
+        }
+    }
+    .fukuan{
+        width:998px;margin:0 auto;
+        background:#fff;border:1px solid #ddd;margin:0 auto;border-top:0;
+        padding-top:20px;
+        p{
+            border:0;background:#fff;
+            
+            a:nth-of-type(1){display:inline-block;border:1px solid orange;border-radius:5px;width:107px;height:29px;font-size:14px;color:orange;text-align:center;line-height:29px;text-decoration:none;}
+            a:nth-of-type(2){font-size:12px;}
+        }
+        .liuliu{
+            width:1000px;margin:0 auto;overflow:hidden;
+            p{color:red;font-size:14px;float:left;}
+            ul{
+                font-size:14px;
+                margin-right:10px;
+                float:right;
+                li{list-style:none;}
+            }
+            ul:nth-of-type(1){color:orange;}
+        }
+    }
+        .qiqi{width:978px;margin:0 auto;border:1px solid orange;background:#fffbf3;padding:10px 0 10px 20px;font-size:14px;overflow:hidden;
+            a{
+                text-decoration:none;
+            }
+            .money{
+                float:right;
+                margin-right:10px;
+                b{
+                    margin-bottom:5px;
+                    span{color:red;font-weight:600px;font-size:28px;}
+                }
+                a{display:inline-block;width: 140px;height: 54px;background: url(../img/mian.png) no-repeat -860px -945px;margin-left: 10px;}
+            }
+            
+        }
+    }
+}

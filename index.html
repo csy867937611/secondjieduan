@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>index</title>
+	<style>
+		.listone p{position:relative;width:290px;}
+		.move{position:relative;}
+		.hot p{position:relative;}
+		.hold{position:absolute;bottom:117px;left:0;background:url(../img/rightgo.png) no-repeat;display:none !important;}
+		.hot p .hold:hover{display:block;}
+	</style>
+	<link rel="stylesheet" href="./css/body.css" />
+	<link rel="stylesheet" href="./lib/jquery.lxCarousel/jquery.lxCarousel.css" />
+	<link rel="stylesheet" href="./lib/laochen/laochen.css" />
+	<script src="./js/require.js" data-main="./js/luobo"></script>
+	<script src="./lib/jquery3.1.1.js"></script>
+	<script>
+		jQuery(($)=>{
+			/*$('.one').children('p').css({width:})*/
+			var tpkuan;
+			var tpgao;
+			//鼠标事件1
+			$('.listone').find('img').on('mouseenter',function(){
+				$(this).addClass('move');
+				/*console.log($(this));*/
+				tpkuan = parseInt($(this).css('width'));
+				tpgao = parseInt($(this).css('height'));
+				$(this).stop().animate({
+								width:(tpkuan-15),
+								height:(tpgao-20)
+				},3000);
+			});
+			$('.listone').find('img').on('mouseleave',function(){
+				$(this).stop(true).animate({
+								width:tpkuan,
+								height:tpgao
+				},3000);
+				
+			});
+		})
+
+	</script>
+</head>
+<body>
+	<div class="bigbox">
+		<!--身体-->
+		<div class="sbody">
+			<!--轮播图-->
+			<div class="banner">
+				<div class="bannerimg">
+					
+				</div>
+			</div>
+			<!--本周主题栏目-->
+			<div class="list">
+				<div class="week">
+					<h2></h2>
+					<div class="newline"></div>
+					<div class="listone">
+						<div class="one">
+							<p><img src="./img/146226486454643.jpg"/></p>
+							<p><img src="./img/146345251960016.jpg"/></p>
+						</div>
+						<div class="two">
+							<img src="./img/146224025027337.jpg"/>
+						</div>
+						<div class="three">
+							<img src="./img/146223964077541.jpg"/>
+							<img src="./img/146053428860134.jpg"/>
+							<img src="./img/146053409658019.jpg"/>
+						</div>
+					</div>
+					<div class="four">
+						<img src="./img/145923138358550.jpg"/>
+						<img src="./img/145923473062689.jpg"/>
+						<img src="./img/145932164779618.jpg"/>
+					</div>
+				</div>
+				<!--热门品牌-->
+				<div class="brand">
+					<h2></h2>
+					<div class="newline"></div>
+					<div class="hot">
+						<p>
+							<img class="hold" src="../img/rightgo.png" />
+							<img src="./img/143882526866130.jpg"/>
+							<img src="./img/143882530227630.jpg"/>
+						</p>
+						<p>
+							<img src="./img/143882538451065.jpg"/>
+							<img src="./img/143882403931658.jpg"/>
+						</p>
+						<table>
+							<tr>
+								<td><a href=""><img src="./img/145932425930709.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932426392318.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932438379652.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932400656841.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932404562505.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932415263292.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932417259755.jpg"/></a></td>
+							</tr>
+							<tr>
+								<td><a href=""><img src="./img/145932425930709.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932426392318.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932438379652.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932400656841.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932404562505.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932415263292.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932417259755.jpg"/></a></td>
+							</tr>
+							<tr>
+								<td><a href=""><img src="./img/145932425930709.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932426392318.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932438379652.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932400656841.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932404562505.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932415263292.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932417259755.jpg"/></a></td>
+							</tr>
+							<tr>
+								<td><a href=""><img src="./img/145932425930709.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932426392318.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932438379652.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932400656841.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932404562505.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932415263292.jpg"/></a></td>
+								<td><a href=""><img src="./img/145932417259755.jpg"/></a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--宝宝奶粉-->
+				<div class="milk">
+					<h2></h2>
+					<p>宝宝<span>奶</span>粉</p>
+					<div class="newline"></div>
+					<div class="milkbox">
+						<div class='xiaofen'>
+							<dl>
+								<dd><a href=""><img src="../img/145923445424031.jpg" /></a></dd>
+								<dt><a href="">1段</a></dt>
+								<dt><a href="">2段</a></dt>
+								<dt><a href="">3段</a></dt>
+								<dt><a href="">4段</a></dt>
+								<dt><a href="">5段</a></dt>
+								<dt><a href="">羊奶粉</a></dt>
+								<dt><a href="">特殊配方</a></dt>
+								<dt><a href="">热卖奶粉</a></dt>
+							</dl>
+							<div class="xiaolun"></div>
+						</div>
+						<div class="fen"><img src="../img/145205183956628.jpg"/></div>
+						<div class="table">
+							<p>
+								<img src="../img/144489321654967_225x225.jpg"/>
+								<a href="">
+惠氏启赋illuma幼儿配方奶粉3段900g【原装进口】</a>
+							</p>
+							<p>
+								<img src="../img/144489321654967_225x225.jpg"/>
+								<a href="">
+惠氏启赋illuma幼儿配方奶粉3段900g【原装进口】</a>
+							</p>
+							<p>
+								<img src="../img/144489321654967_225x225.jpg"/>
+								<a href="">
+惠氏启赋illuma幼儿配方奶粉3段900g【原装进口】</a>
+							</p>
+							<p>
+								<img src="../img/144489321654967_225x225.jpg"/>
+								<a href="">
+惠氏启赋illuma幼儿配方奶粉3段900g【原装进口】</a>
+							</p>
+							<p>
+								<img src="../img/144489321654967_225x225.jpg"/>
+								<a href="">
+惠氏启赋illuma幼儿配方奶粉3段900g【原装进口】</a>
+							</p>
+							<p>
+								<img src="../img/144489321654967_225x225.jpg"/>
+								<a href="">
+惠氏启赋illuma幼儿配方奶粉3段900g【原装进口】</a>
+							</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="floor">
+					
+					<ul>
+						<li>专注母婴十二年</li>
+						<li>正品保证</li>
+						<li>打破底价</li>
+						<li>闪电发货</li>
+						<li>优质服务</li>
+					</ul>
+					<ul>
+						<li>求真务实&nbsp;&nbsp;&nbsp;&nbsp;专注母婴</li>
+						<li>求真务实&nbsp;&nbsp;&nbsp;&nbsp;专注母婴</li>
+						<li>求真务实&nbsp;&nbsp;&nbsp;&nbsp;专注母婴</li>
+						<li>求真务实&nbsp;&nbsp;&nbsp;&nbsp;专注母婴</li>
+						<li>求真务实&nbsp;&nbsp;&nbsp;&nbsp;专注母婴</li>
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="guding"></div>
+</body>
+</html>

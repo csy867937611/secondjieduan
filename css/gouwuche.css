@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.header .head {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.header .head ul {
+  float: right;
+  margin: 10px;
+}
+
+.header .head ul li {
+  float: left;
+  list-style: none;
+}
+
+.header .head ul li span {
+  font-size: 12px;
+}
+
+.header .head ul li a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #000;
+  margin: 10px;
+}
+
+.body .biaoti {
+  width: 1000px;
+  margin: 15px auto 0;
+}
+
+.body .biaoti p:nth-of-type(1) {
+  background: url(../img/vvtwospt.png) no-repeat;
+  width: 544px;
+  height: 35px;
+  float: right;
+  margin: 20px;
+}
+
+.body .biaoti p:nth-of-type(2) {
+  margin: 20px 0;
+  position: relative;
+}
+
+.body .biaoti p:nth-of-type(2) span:nth-of-type(1) {
+  background: url(../img/vvtwospt.png) no-repeat -117px -197px;
+  display: inline-block;
+  width: 25px;
+  height: 24px;
+}
+
+.body .biaoti p:nth-of-type(2) span:nth-of-type(2) {
+  margin-left: 5px;
+}
+
+.body .biaoti p:nth-of-type(2) span:nth-of-type(3) {
+  position: absolute;
+  right: 0;
+}
+
+.body .godd p {
+  width: 978px;
+  margin: 0 auto;
+  border: 1px solid orange;
+  background: #fffbf3;
+  padding: 10px 0 10px 20px;
+  font-size: 14px;
+}
+
+.body .godd p labor {
+  margin-right: 300px;
+}
+
+.body .godd p span {
+  margin: 0 50px;
+}
+
+.body .godd .neirong {
+  width: 998px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  border-top: 0;
+}
+
+.body .godd .neirong ul {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  padding-left: 20px;
+}
+
+.body .godd .neirong ul li {
+  list-style: none;
+  margin-top: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.body .godd .neirong ul li img {
+  width: 100px;
+  height: 100px;
+}
+
+.body .godd .neirong ul li span {
+  border: 1px solid #000;
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+}
+
+.body .godd .neirong ul li span:nth-of-type(2) {
+  width: 40px;
+}
+
+.body .godd .neirong ul li:nth-of-type(2) {
+  width: 100px;
+}
+
+.body .godd .neirong ul li:nth-of-type(3) {
+  width: 250px;
+  font-size: 12px;
+}
+
+.body .godd .neirong ul li:nth-of-type(4) {
+  width: 70px;
+  padding: 0 80px 0 50px;
+}
+
+.body .godd .neirong ul li:nth-of-type(6) {
+  width: 70px;
+  padding: 0 70px 0 90px;
+}
+
+.body .godd .neirong ul li:nth-of-type(7) {
+  margin-right: 0;
+}
+
+.body .godd .fukuan {
+  width: 998px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  border-top: 0;
+  padding-top: 20px;
+}
+
+.body .godd .fukuan p {
+  border: 0;
+  background: #fff;
+}
+
+.body .godd .fukuan p a:nth-of-type(1) {
+  display: inline-block;
+  border: 1px solid orange;
+  border-radius: 5px;
+  width: 107px;
+  height: 29px;
+  font-size: 14px;
+  color: orange;
+  text-align: center;
+  line-height: 29px;
+  text-decoration: none;
+}
+
+.body .godd .fukuan p a:nth-of-type(2) {
+  font-size: 12px;
+}
+
+.body .godd .fukuan .liuliu {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.body .godd .fukuan .liuliu p {
+  color: red;
+  font-size: 14px;
+  float: left;
+}
+
+.body .godd .fukuan .liuliu ul {
+  font-size: 14px;
+  margin-right: 10px;
+  float: right;
+}
+
+.body .godd .fukuan .liuliu ul li {
+  list-style: none;
+}
+
+.body .godd .fukuan .liuliu ul:nth-of-type(1) {
+  color: orange;
+}
+
+.body .godd .qiqi {
+  width: 978px;
+  margin: 0 auto;
+  border: 1px solid orange;
+  background: #fffbf3;
+  padding: 10px 0 10px 20px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.body .godd .qiqi a {
+  text-decoration: none;
+}
+
+.body .godd .qiqi .money {
+  float: right;
+  margin-right: 10px;
+}
+
+.body .godd .qiqi .money b {
+  margin-bottom: 5px;
+}
+
+.body .godd .qiqi .money b span {
+  color: red;
+  font-weight: 600px;
+  font-size: 28px;
+}
+
+.body .godd .qiqi .money a {
+  display: inline-block;
+  width: 140px;
+  height: 54px;
+  background: url(../img/mian.png) no-repeat -860px -945px;
+  margin-left: 10px;
+}
