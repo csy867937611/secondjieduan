@@ -1,17 +1,21 @@
 require(['config'],function(){
 	require(['jquery','abc','cba'],function($){
+		//插入头部
 		$('<div/>').addClass('header').load('../html/header.html',function(){
 				$(this).insertBefore('.bigbox');
-		})
+		});
+		//插入尾部
 		$('<div/>').addClass('foot').load('../html/footer.html',function(){
 				$(this).insertAfter('.bigbox');
-		})
+		});
+		//插入固定栏
 		$('.guding').laochen({
 			type:'gudinglan',
 			width:88,
 			height:300,
 			imgs:['../img/fix01.png','../img/fix02.png','../img/fix03.png','../img/fix04.png','../img/fix05.png']
-		})
+		});
+		//发起请求数据
 		var pageNo=1;
 		var qty=16;
 		$.ajax({
@@ -77,5 +81,26 @@ require(['config'],function(){
 				})
 			}
 		})
+		//二级菜单
+		$('.fenlei .mone').on('mouseenter',function(){
+			$('.secondlei ').laochen({
+				type:'secondMeniu',
+				shuju:['新生儿','S码','M码','L码','XL码','XXL码','裤型纸尿裤']
+			})
+		});
+		$('.fenlei .mseond').on('mouseenter',function(){
+			console.log($('.fenlei .mseond'))
+			$('.secondlei ').laochen({
+				type:'secondMeniu',
+				shuju:['1段','2段','3段 ','4段','5段','羊奶粉','特殊配方奶粉']          
+			})
+		});
+		$('.fenlei .mthree').on('mouseenter',function(){
+			$('.secondlei ').laochen({
+				type:'secondMeniu',
+				shuju:[
+'爽身防晒','安全防护','宝宝护肤','洗发／沐浴','日常护理 ','驱蚊防蚊','洗衣液/皂','牙膏牙刷' , '奶瓶清洗','座便器', '洗澡/游泳用具','洗手液/皂','套装礼盒','护肤湿巾','婴儿理发器']          
+			})
+		});
 	})
 })

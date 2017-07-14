@@ -35,5 +35,6 @@
 			echo "Error: " . $sql . "<br>" . $conn->error;
 		}	
 	}
-	
+	//关闭连接
+	$conn->close();
 ?>

@@ -86,8 +86,11 @@
 
 .bigbox .second .message p:nth-of-type(3) {
   margin-top: 20px;
-  font-size: 28px;
+}
+
+.bigbox .second .message p:nth-of-type(3) span:nth-of-type(1) {
   font-weight: 600;
+  font-size: 28px;
   color: red;
 }
 
@@ -98,7 +101,7 @@
   margin-left: 10px;
 }
 
-.bigbox .second .message p:nth-of-type(3) span:nth-of-type(1) {
+.bigbox .second .message p:nth-of-type(3) span:nth-of-type(2) {
   font-size: 12px;
   background: url(../img/mian.png) no-repeat -3px -59px;
   display: inline-block;
@@ -109,7 +112,7 @@
   text-indent: 3px;
 }
 
-.bigbox .second .message p:nth-of-type(3) span:nth-of-type(3) {
+.bigbox .second .message p:nth-of-type(3) span:nth-of-type(4) {
   text-decoration: line-through;
 }
 
@@ -214,6 +217,49 @@
 
 .bigbox .second .message p:nth-of-type(7) {
   margin: 20px 0 0 10px;
+}
+
+.bigbox .xiangpic {
+  width: 1000px;
+  margin: 20px auto 0;
+  background: #fff;
+}
+
+.bigbox .xiangpic .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.bigbox .xiangpic ul {
+  width: 1000px;
+  height: 46px;
+  background: #eaeaea;
+}
+
+.bigbox .xiangpic ul li {
+  list-style: none;
+  float: left;
+}
+
+.bigbox .xiangpic ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  width: 100px;
+  height: 46px;
+  color: #fff;
+  text-align: center;
+  line-height: 46px;
+  background: #eaeaea;
+}
+
+.bigbox .xiangpic ul li a:nth-of-type(1) {
+  background: #71d9ed;
 }
 
 .car {

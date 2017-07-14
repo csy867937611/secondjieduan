@@ -23,13 +23,13 @@ require(['config'],()=>{
 			}
 			//验证码不能为空
 			var _auth_code=$('auth_code').val();
-			if(!/^[0-9a-z\-]$/.test(_auth_code)){
+			if(!/^[\d]$/.test(_auth_code)){
 				alert('验证码不对');
 				return false;
 			}
 			//语音验证码不能为空
 			var _vioce=$('vioce').val();
-			if(!/^[0-9a-z\-]$/.test(_vioce)){
+			if(!/^[\d]$/.test(_vioce)){
 				alert('语音验证码不对');
 				return false;
 			}

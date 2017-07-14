@@ -2,12 +2,15 @@
 require(['config'],function(){
 	require(['jquery','abc','cba'],function($){
 		console.log($('.bannerimg'));
+		//插入头部
 		$('<div/>').addClass('header').load('./html/header.html',function(){
 				$(this).insertBefore('.bigbox');
-		})
+		});
+		//插入尾部
 		$('<div/>').addClass('foot').load('./html/footer.html',function(){
 				$(this).insertAfter('.bigbox');
-		})
+		});
+		//轮播图效果
 		$('.bannerimg').lxCarousel({
 			imgs:['../img/146165925073012.jpg','../img/146362990519903.jpg','../img/146363070255164.jpg'],
 			page:true,
@@ -18,6 +21,7 @@ require(['config'],function(){
 			type:'fadeShow',
 			buttons:false
 		});
+		//小轮播图效果
 		$('.xiaolun').lxCarousel({
 			imgs:['../img/2-1.jpg','../img/2-2.jpg','../img/2-3.jpg','../img/2-4.jpg','../img/2-5.jpg','../img/2-6.jpg'],
 			bigwidth:180,
@@ -27,13 +31,34 @@ require(['config'],function(){
 			page:false,
 			buttons:false,
 			type:'horizontal'
-		})
+		});
+		//右边固定栏效果
 		$('.guding').laochen({
 			type:'gudinglan',
 			width:88,
 			height:300,
 			imgs:['../img/fix01.png','../img/fix02.png','../img/fix03.png','../img/fix04.png','../img/fix05.png']
-		})
+		});
 		//console.log(999)
+		var tpkuan;
+		var tpgao;
+		//鼠标事件1
+		$('.listone').find('img').on('mouseenter',function(){
+			$(this).addClass('move');
+			/*console.log($(this));*/
+			tpkuan = parseInt($(this).css('width'));
+			tpgao = parseInt($(this).css('height'));
+			$(this).stop().animate({
+				width:(tpkuan-15),
+				height:(tpgao-20)
+			},3000);
+		});
+		$('.listone').find('img').on('mouseleave',function(){
+			$(this).stop(true).animate({
+				width:tpkuan,
+				height:tpgao
+		},3000);
+				
+		});
 	})
 })

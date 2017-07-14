@@ -17,7 +17,7 @@ require(['config'],function(){
 				/*var goodlist=res[0];*/
 				var $big=`<p><span></span>牛栏<span></span></p>
 					<p>${res[0].brand}&nbsp;${res[0].name}&nbsp;&nbsp;<span>适合0-6个月</span></p>
-					<p>￥${res[0].price}<span>${res[0].discount}</span><span>市场价：</span><span>${res[0].sprice}</span><span>&nbsp;&nbsp;优惠：￥24.00</span></p>
+					<p><span>￥${res[0].price}</span><span>${res[0].discount}</span><span>市场价：</span><span>${res[0].sprice}</span><span>&nbsp;&nbsp;优惠：￥24.00</span></p>
 					<p>
 						<span></span>
 						<span>专注零售十二年&nbsp;&nbsp;质量保证</span>
@@ -61,7 +61,6 @@ require(['config'],function(){
 					$cloneimg.appendTo($('body'));
 					$cloneimg.animate({left:$_left,top:$_top},1000,function(){
 						var $idx=1;
-						console.log($idx)
 						//创建li
 						var $li=$('<li/>').css({listStyle:'none',position:'relative'});
 						$cloneimg.css({left:30*$idx,top:30*$idx});
@@ -82,35 +81,58 @@ require(['config'],function(){
 				$('.jia').on('click',function(){
 					$qty++;
 					$('.number').html($qty);
-					var $price=res[0].price*$qty+'.00';
+					var $price='￥'+res[0].price*$qty+'.00';
 					//写进商品金额
-					$('.message').children().eq(2).html($price);
+					$('.message').children().eq(2).children().first().html($price);
 				})
 				$('.jian').on('click',function(){
 					$qty--;
 					$('.number').html($qty);
-					var $price=res[0].price*$qty;
+					var $price='￥'+res[0].price*$qty+'.00';
 					//写进商品金额
-
+					$('.message').children().eq(2).children().first().html($price);
 				})
 			}
-		})
+		});
 
 		$('.piture').gdsZoom({
 			width:372,
 			height:372,
 			gap:0,
-		})
+		});
+		//固定栏
 		$('.guding').laochen({
 			type:'gudinglan',
 			width:88,
 			height:300,
 			imgs:['../img/fix01.png','../img/fix02.png','../img/fix03.png','../img/fix04.png','../img/fix05.png']
-		})
+		});
+		//生成小图，点击span滚动，点击小图出现大图
 		$('.xiaopiture').laochen({
 			width:340,
 			type:'xiaotu',
 			imgs:['../img/15530_63x63.jpg','../img/15531_63x63.jpg','../img/15532_63x63.jpg','../img/15533_63x63.jpg','../img/small_20161124172041111012_63x63.jpg']
-		})
+		});
+		//吸顶菜单，绑定滚动事件
+		window.onscroll=function(){
+			var scrollTop=window.scrollY;
+			// 判断滚动过的高度
+			if(scrollTop >= 800){
+				// 获取/设置元素的类
+				$('.ceiling').addClass('fixed');
+			}else{
+				$('.fixed').removeClass('fixed');
+			}
+		};
+		//点击小图出大图		
+		$('.suolue li img').on('click',function(){
+			var $src=$(this).attr('src').slice(0,13);
+			
+			var $newSrc=$src+'327x327.jpg';
+			console.log($newSrc);
+			var $img=$('<img/>').attr('src',$newSrc);
+			console.log($img);
+			$('.piture').html($img);
+		});
 	})
 })

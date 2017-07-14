@@ -3,44 +3,11 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>index</title>
-	<style>
-		.listone p{position:relative;width:290px;}
-		.move{position:relative;}
-		.hot p{position:relative;}
-		.hold{position:absolute;bottom:117px;left:0;background:url(../img/rightgo.png) no-repeat;display:none !important;}
-		.hot p .hold:hover{display:block;}
-	</style>
 	<link rel="stylesheet" href="./css/body.css" />
 	<link rel="stylesheet" href="./lib/jquery.lxCarousel/jquery.lxCarousel.css" />
 	<link rel="stylesheet" href="./lib/laochen/laochen.css" />
 	<script src="./js/require.js" data-main="./js/luobo"></script>
 	<script src="./lib/jquery3.1.1.js"></script>
-	<script>
-		jQuery(($)=>{
-			/*$('.one').children('p').css({width:})*/
-			var tpkuan;
-			var tpgao;
-			//鼠标事件1
-			$('.listone').find('img').on('mouseenter',function(){
-				$(this).addClass('move');
-				/*console.log($(this));*/
-				tpkuan = parseInt($(this).css('width'));
-				tpgao = parseInt($(this).css('height'));
-				$(this).stop().animate({
-								width:(tpkuan-15),
-								height:(tpgao-20)
-				},3000);
-			});
-			$('.listone').find('img').on('mouseleave',function(){
-				$(this).stop(true).animate({
-								width:tpkuan,
-								height:tpgao
-				},3000);
-				
-			});
-		})
-
-	</script>
 </head>
 <body>
 	<div class="bigbox">
@@ -83,13 +50,24 @@
 					<div class="newline"></div>
 					<div class="hot">
 						<p>
-							<img class="hold" src="../img/rightgo.png" />
-							<img src="./img/143882526866130.jpg"/>
-							<img src="./img/143882530227630.jpg"/>
+							<a href="">
+								<img class="hold" src="../img/rightgo.png" />
+								<img src="./img/143882526866130.jpg"/>
+							</a>
+							<a href="">
+								<img class="hold" src="../img/rightgo.png" />
+								<img src="./img/143882530227630.jpg"/>
+							</a>
 						</p>
 						<p>
-							<img src="./img/143882538451065.jpg"/>
-							<img src="./img/143882403931658.jpg"/>
+							<a href="">
+								<img class="hold" src="../img/rightgo.png" />
+								<img src="./img/143882538451065.jpg"/>
+							</a>
+							<a href="">
+								<img class="hold" src="../img/rightgo.png" />
+								<img src="./img/143882403931658.jpg"/>
+							</a>
 						</p>
 						<table>
 							<tr>

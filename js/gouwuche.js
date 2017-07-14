@@ -16,8 +16,8 @@ require(['config'],function(){
 					<li><input type="checkbox"/></li>
 					<li><img src="${item.img}"</li>
 					<li>${item.name}</li>
-					<li>${item.price}</li>
-					<li><span class="jian">-</span><span class="number">${$qty}</span><span class="jia">+</span></li>
+					<li class="dan">${item.price}</li>
+					<li><span class="jian">-</span><input type="text" class="number" value="1"><span class="jia">+</span></li>
 					<li class="price">${item.price}</li>
 					<li class="delete"><span>x</span></li>
 				</ul>
@@ -30,28 +30,29 @@ require(['config'],function(){
 		$('.money').find('span').html(_goodPrice);
 		
 		//点击事件
-		$('.jia').on('click',function(){
-			$qty++;
-			$('.number').html($qty);
-			var $price=_goodlist.price*$qty+'.00';
-			$('.price').html($price);
+		$('li').on('click','.jia',function(){
+			
+			var res=$(this).siblings('input').val();
+			res++;
+			$(this).siblings('input').val(res);
+			var price=Number($(this).parent().siblings('.dan').html());
+			$(this).parent().siblings('.price').html('￥'+res*price);
 			//写进商品金额
-			$('.liuliu').find('li').first().html($price);
-			$('.money').find('span').html($price);
+			$('.liuliu').find('li').first().html('￥'+res*price);
+			$('.money').find('span').html('￥'+res*price);
 		})
-		$('.jian').on('click',function(){
-			$qty--;
-			$('.number').html($qty);
-			var $price=_goodlist.price*$qty;
-			$('.price').html($price);
+		$('li').on('click','.jian',function(){
+			var res=$(this).siblings('input').val();
+			res--;
+			$(this).siblings('input').val(res);
+			var price=Number($(this).parent().siblings('.dan').html());
+			$(this).parent().siblings('.price').html('￥'+res*price);
 			//写进商品金额
-			$('.liuliu').find('li').first().html($price);
-			$('.money').find('span').html($price);
+			$('.liuliu').find('li').first().html('￥'+res*price);
+			$('.money').find('span').html('￥'+res*price);
 		})
-		$('.delete').on('click',function(){
-			var index=$('this').index();
-			console.log(index)
-			$('.neirong').find('ul').remove();
+		$('ul').on('click','.delete',function(){
+			$(this).parent('ul').remove();
 		})
 	})
 })
